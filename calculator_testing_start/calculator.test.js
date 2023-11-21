@@ -119,13 +119,52 @@ describe('divide', () => {
 });
 
 describe('modulus', () => {
+  test('can calculate the modulus of a positive number by a positive number', () => {
+    expected = 3;
+    actual = modulus(3, 10);
+    expect(actual).toBe(expected);
+  });
+
+  test('can calculate the modulus of a negative number by a negative number', () => {
+    expected = -2;
+    actual = modulus(-2, -5);
+    expect(actual).toBe(expected);
+  });
+
+  test('can calculate the modulus of zero', () => {
+    expected = 0;
+    actual = modulus(0, 1);
+    expect(actual).toBe(expected);
+  });
 
 });
 
 describe('even', () => {
+  test ('can check a small positive even number', () => {
+    expected = true;
+    actual = even(2);
+    expect(actual).toBe(expected);
+  });
+
+  test('can check a zero', () => {
+    expected = true;
+    actual = even(0);
+    expect(actual).toBe(expected);
+  });
 
 });
 
 describe('odd', () => {
+  test('can check a small positive odd number', () => {
+    expected = true;
+    actual = odd(5);
+    expect(actual).toBe(expected);
+  });
+
+  test('can check a zero', () => {
+    expected = false;
+    actual = odd(0);
+    expect(actual).toBe(expected);
+  });
 
 });
