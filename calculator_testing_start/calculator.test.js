@@ -92,6 +92,29 @@ describe('multiply', () => {
 });
 
 describe('divide', () => {
+  test('can divide by two positive numbers', () => {
+    expected = 5;
+    actual = divide(100, 20);
+    expect(actual).toBe(expected);
+  });
+
+  test('can divide by two large positive numbers', () => {
+    expected = 100;
+    actual = divide(10000, 100);
+    expect(actual).toBe(expected);
+  });
+
+  test('can divide by two negative numbers', () => {
+    expected = 2;
+    actual = divide(-4, -2);
+    expect(actual).toBe(expected);
+  });
+
+  test('can divide by zero', () => {
+    expected = 0;
+    actual = divide(0, 1);
+    expect(actual).toBe(expected);
+  });
 
 });
 
